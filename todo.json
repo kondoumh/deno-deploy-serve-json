@@ -8,7 +8,7 @@
     {
       "id": 2,
       "title": "Buy milk",
-      "done": false
+      "done": true
     },
     {
       "id": 3,
