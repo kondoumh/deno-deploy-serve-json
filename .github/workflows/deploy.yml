@@ -1,6 +1,12 @@
 name: Deploy
 
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -18,5 +24,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: kondoumh-serve-json
-          entrypoint: mod.ts
-          import-map: import_map.json
+          entrypoint: ./mod.ts
+          import-map: ./import_map.json
